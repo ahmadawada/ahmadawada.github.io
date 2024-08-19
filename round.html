@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA Round Details</title>
+ <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 50px;
+    text-align: left;
+    color: #0073e6;
+}
+
+.round-details-table {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 50px; /* Spacing between tables */
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+td {
+    color: #333;
+}
+
+td.teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between team IDs */
+    max-width: 700px; /* Adjust as needed */
+}
+
+td.teams div {
+    flex: 1 1 auto;
+    min-width: 50px; /* Minimum width of each team ID block */
+    text-align: center;
+    border: 1px solid #ddd; /* Optional border for better visibility */
+    padding: 5px; /* Padding around each team ID */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td, th {
+    transition: background-color 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        padding: 10px 10px;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tr:hover {
+        background-color: transparent;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+    <h1>UEFA Round Details : UCL 2025</h1>
+ <div id="round-details-container"></div> <!-- Container for the tables -->
+    <script src="app.js"></script>
+</body>
+</html>
